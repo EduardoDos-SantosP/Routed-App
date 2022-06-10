@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import ConsultarMovimentacao from '../views/movimentacao/ConsultarMovimentacao.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Movimentacao',
+    component: ConsultarMovimentacao
   },
   {
     path: '/about',
