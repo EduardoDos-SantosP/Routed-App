@@ -1,31 +1,10 @@
 <template>
   <v-app>
-    <v-main class="bg">
-      <v-app-bar class="bg">
-        <v-toolbar-title class="w-100 my-auto mx-auto pt-1 text-light" style="font-size: 14pt">
-          Controle de Despesas e Receitas
-        </v-toolbar-title>
-      </v-app-bar>
+    <v-main>
+      <Header></Header>
 
-      <v-container fluid class="mt-16">
-        <v-row justify="center">
-          <v-col
-              v-for="(link, i) in links"
-              :key="i"
-              cols="auto"
-              class="px-1"
-              >
-            <router-link :to="link.route">
-              <v-btn plain color="white">
-                {{ link.label }}
-              </v-btn>
-            </router-link>
-          </v-col>
-        </v-row>
-
-        <v-container fluid>
-          <router-view/>
-        </v-container>
+      <v-container fluid>
+        <router-view/>
       </v-container>
     </v-main>
   </v-app>
@@ -33,21 +12,10 @@
 
 <script>
 
+import Header from "@/components/Header";
 export default {
   name: 'App',
-
-  data: () => ({
-    links: [
-      {
-        label: 'Home',
-        route: '/'
-      },
-      {
-        label: 'About',
-        route: '/About'
-      }
-    ]
-  }),
+  components: {Header}
 };
 </script>
 
@@ -55,7 +23,7 @@ export default {
 a {
   text-decoration: none !important;
 }
-.bg {
-  background-color: var(--dark) !important;
+.bg-gradient {
+  background: linear-gradient(-15deg, rgba(0, 0, 0, .05), transparent, rgba(255, 255, 255, .05));
 }
 </style>
