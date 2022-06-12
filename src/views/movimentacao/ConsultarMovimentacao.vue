@@ -29,7 +29,9 @@
             </div>
           </v-card-text>
           <v-card-actions class="justify-content-end">
-            <v-btn color="primary" text small >Editar</v-btn>
+            <router-link :to="'/novo?id=' + item.id">
+              <v-btn color="primary" text small >Editar</v-btn>
+            </router-link>
           </v-card-actions>
         </v-card>
       </div>
@@ -58,10 +60,8 @@ export default {
     }
   },
   mounted() {
-    axios.get('Movimentacao/todos/')
+    axios.get('movimentacao/todos/')
         .then(response => {
-          if (response.status !== 200) return;
-
           const data = response.data
 
           if (data.error) return console.error(data.body)

@@ -1,12 +1,12 @@
 <template>
   <div class="bg-light">
-    <v-app-bar color="teal">
+    <v-app-bar color="teal" class="bg-gradient position-fixed fixed-top">
       <v-toolbar-title class="w-100 my-auto mx-auto pt-1 text-light" style="font-size: 14pt">
         Controle de Despesas e Receitas
       </v-toolbar-title>
     </v-app-bar>
 
-    <v-row justify="center" class="my-8 border-bottom">
+    <v-row justify="center" class="mt-16 mb-8 bg-gradient border-bottom">
       <v-col
           v-for="(link, i) in links"
           :key="i"
@@ -34,7 +34,7 @@ export default {
       },
       {
         label: 'Novo',
-        route: '/About'
+        route: '/novo'
       }
     ]
   })

@@ -1,5 +1,5 @@
 <template>
-  <v-card id="Dashboard" class="bg-gradient" elevation="4">
+  <v-card id="Dashboard" class="bg-gradient position-sticky" elevation="4" style="top: 80px">
     <v-card-title class="text-h4 teal--text text--darken-4">
       <span>Dashboard</span>
     </v-card-title>
@@ -53,8 +53,4 @@ export default {
 </script>
 
 <style scoped>
-#Dashboard {
-  position: sticky;
-  top: 30px;
-}
 </style>

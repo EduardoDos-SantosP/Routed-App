@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main class="bg-gradient">
       <Header></Header>
 
       <v-container fluid>
